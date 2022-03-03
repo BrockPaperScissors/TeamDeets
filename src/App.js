@@ -1,16 +1,10 @@
 import './App.css';
-import Player from './Components/Player';
-import Game from './Components/Game';
-import GameDetails from './Components/GameDetails';
-import FindPlayer from './Components/FindPlayer';
+import MakeCard from './Components/MakeCard';
 
 function App() {
 	return (
 		<div>
-			<FindPlayer />
-			<Player />
-			<Game />
-			<GameDetails />
+			<MakeCard />
 		</div>
 	);
 }
