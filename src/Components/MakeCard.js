@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-import { UserContext } from './UserContext';
+import React from 'react';
 
 export default function MakeCard(props) {
 	return (

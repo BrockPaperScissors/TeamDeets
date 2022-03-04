@@ -1,8 +1,6 @@
-import { UserContext } from './UserContext';
-import React, { useContext, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
-export default function FindPlayer() {
-	const { playerID, setPlayerID } = useContext(UserContext);
+export default function FindPlayer({ setPlayerID }) {
 	let idInput = '';
 	function getPlayerID() {
 		const url = `https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${idInput}?api_key=${process.env.REACT_APP_TEAM_KEY}`;
@@ -11,7 +9,6 @@ export default function FindPlayer() {
 			.then((data) => {
 				setPlayerID(data.puuid);
 				console.log(data);
-				console.log(data.puuid);
 			})
 			.catch(console.error);
 	}
