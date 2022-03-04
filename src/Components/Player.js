@@ -1,5 +1,16 @@
 import React from 'react';
+import { useEffect } from 'react';
 
-export default function Player() {
-	return <h3>Hello from Player</h3>;
+export default function Player({ gameDetails, setPlayerDetails }) {
+	const playerArr = [];
+	useEffect(() => {
+		if (gameDetails) {
+			for (let i = 0; i < 10; i++) {
+				playerArr.push(gameDetails.info.participants[i]);
+				setPlayerDetails(playerArr);
+			}
+		}
+	}, [gameDetails]);
+
+	return null;
 }

@@ -16,5 +16,5 @@ export default function GetGameDetails({ gameID, playerID, setGameDetails }) {
 		}
 	}, [gameID]);
 
-	return <h3>Hello from Game Details</h3>;
+	return null;
 }

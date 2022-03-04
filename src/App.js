@@ -1,7 +1,6 @@
 import './App.css';
 import MakeCard from './Components/MakeCard';
 import Player from './Components/Player';
-import Game from './Components/Game';
 import GetGameDetails from './Components/GameDetails';
 import FindPlayer from './Components/FindPlayer';
 import React, { useState, useEffect } from 'react';
@@ -10,10 +9,10 @@ import GetGameID from './Components/Game';
 function App() {
 	const [playerID, setPlayerID] = useState('');
 	const [gameID, setGameID] = useState('');
-	const [gameDetails, setGameDetails] = useState({});
-	const [playerDetails, setPlayerDetails] = useState({});
+	const [gameDetails, setGameDetails] = useState(null);
+	const [playerDetails, setPlayerDetails] = useState(null);
 	return (
-		<div>
+		<>
 			<FindPlayer setPlayerID={setPlayerID} />
 			<GetGameID playerID={playerID} gameID={gameID} setGameID={setGameID} />
 			<GetGameDetails
@@ -21,9 +20,11 @@ function App() {
 				playerID={playerID}
 				setGameDetails={setGameDetails}
 			/>
-			<MakeCard />
-			<Player />
-		</div>
+			<Player gameDetails={gameDetails} setPlayerDetails={setPlayerDetails} />
+			<div className='card-container'>
+				<MakeCard gameDetails={gameDetails} playerDetails={playerDetails} />
+			</div>
+		</>
 	);
 }
 
