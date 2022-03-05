@@ -15,13 +15,16 @@ function App() {
 		<>
 			<FindPlayer setPlayerID={setPlayerID} />
 			<GetGameID playerID={playerID} gameID={gameID} setGameID={setGameID} />
-			<GetGameDetails
-				gameID={gameID}
-				playerID={playerID}
-				setGameDetails={setGameDetails}
-			/>
+			<GetGameDetails gameID={gameID} setGameDetails={setGameDetails} />
 			<Player gameDetails={gameDetails} setPlayerDetails={setPlayerDetails} />
 			<div className='card-container'>
+				<nav id='game-tabs'>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</nav>
+
 				<MakeCard gameDetails={gameDetails} playerDetails={playerDetails} />
 			</div>
 		</>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 
-export default function GetGameDetails({ gameID, playerID, setGameDetails }) {
+export default function GetGameDetails({ gameID, setGameDetails }) {
 	useEffect(() => {
 		if (gameID) {
 			console.log(gameID);
