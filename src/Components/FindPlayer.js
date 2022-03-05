@@ -8,7 +8,6 @@ export default function FindPlayer({ setPlayerID }) {
 			.then((response) => response.json())
 			.then((data) => {
 				setPlayerID(data.puuid);
-				console.log(data);
 			})
 			.catch(console.error);
 	}

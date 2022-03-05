@@ -7,24 +7,27 @@ export default function MakeCard({ gameDetails, playerDetails }) {
 		if (playerDetails) {
 			console.log(playerDetails);
 			console.log(playerDetails[0].teamId);
-			// for (let i = 0; i < 10; i++) {
-			// 	if (playerDetails[i].teamId === 100) {
-			// 		team1.push(playerDetails[i]);
-			// 	} else {
-			// 		team2.push(playerDetails[i]);
-			// 	}
+			// // for (let i = 0; i < 10; i++) {
+			// // 	if (playerDetails[i].teamId === 100) {
+			// // 		team1.push(playerDetails[i]);
+			// // 	} else {
+			// // 		team2.push(playerDetails[i]);
+			// // 	}
 			// }
 		}
 	}, [playerDetails]);
 
-	console.log(team1);
 	return (
-		<>
+		<div>
 			<div className='card-box'>
 				{playerDetails &&
 					playerDetails.map((playerDetails) => (
 						<div key={playerDetails.summonerId} className='card'>
-							<h1>{playerDetails.summonerName}</h1>
+							<header id='card-header'>
+								<h1 id='sumName'>{playerDetails.summonerName}</h1>
+								<h2>Team: {playerDetails.teamId / 100}</h2>
+								<h3>{playerDetails.championName}</h3>
+							</header>
 							<ul id='KDR'>
 								<li className='KDA'>Kills: {playerDetails.kills}</li>
 								<li className='KDA'>Deaths: {playerDetails.deaths}</li>
@@ -42,8 +45,6 @@ export default function MakeCard({ gameDetails, playerDetails }) {
 									)}
 								</li>
 							</ul>
-							<h2></h2>
-							<h3>{playerDetails.championName}</h3>
 						</div>
 					))}
 			</div>
@@ -60,8 +61,8 @@ export default function MakeCard({ gameDetails, playerDetails }) {
 							<h2></h2>
 							<h3></h3>
 						</div>
-					))}
-			</div> */}
-		</>
+					))} */}
+			<div>Hello</div>
+		</div>
 	);
 }

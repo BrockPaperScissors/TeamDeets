@@ -1,0 +1,21 @@
+.card {
+	border: 2px solid orange;
+}
+#KDR {
+	list-style-type: none;
+}
+
+.card-box {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 20%);
+	grid-template-rows: 1fr 1fr;
+	background-color: bisque;
+}
+
+#card-header {
+	display: flex;
+	flex-direction: column;
+}
+#sumName {
+	font-size: 20px;
+}
