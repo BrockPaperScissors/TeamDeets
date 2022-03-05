@@ -18,12 +18,13 @@ function App() {
 			<GetGameDetails gameID={gameID} setGameDetails={setGameDetails} />
 			<Player gameDetails={gameDetails} setPlayerDetails={setPlayerDetails} />
 			<div id='container'>
+				<h1 id='page-title'>Team Deets</h1>
 				<nav id='game-tabs'>
-					<li>Most Recent Game</li>
-					<li>Game 2</li>
-					<li>Game 3</li>
-					<li>Game 4</li>
-					<li>Game 5</li>
+					<li className='games'>Most Recent Game</li>
+					<li className='games'>Game 2</li>
+					<li className='games'>Game 3</li>
+					<li className='games'>Game 4</li>
+					<li className='games'>Game 5</li>
 				</nav>
 
 				<MakeCard gameDetails={gameDetails} playerDetails={playerDetails} />

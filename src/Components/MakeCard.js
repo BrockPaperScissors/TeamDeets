@@ -18,7 +18,7 @@ export default function MakeCard({ gameDetails, playerDetails }) {
 	}, [playerDetails]);
 
 	return (
-		<div id='container'>
+		<div>
 			<div className='card-box'>
 				{playerDetails &&
 					playerDetails.map((playerDetails) => (

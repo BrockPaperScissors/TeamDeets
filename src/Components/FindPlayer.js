@@ -22,10 +22,14 @@ export default function FindPlayer({ setPlayerID }) {
 	}
 
 	return (
-		<form onSubmit={handleSubmit}>
-			<label htmlFor='summonerSearch'>Summoner Name: </label>
+		<form onSubmit={handleSubmit} id='find-summoner'>
+			<label htmlFor='summonerSearch' id='summoner-label'>
+				Summoner Name:{' '}
+			</label>
 			<input type='text' id='summonerSearch' onChange={handleChange} />
-			<button type='submit'>Find Summoner</button>
+			<button type='submit' id='search-button'>
+				Find Summoner
+			</button>
 		</form>
 	);
 }
