@@ -18,33 +18,35 @@ export default function MakeCard({ gameDetails, playerDetails }) {
 	}, [playerDetails]);
 
 	return (
-		<div>
+		<div id='container'>
 			<div className='card-box'>
 				{playerDetails &&
 					playerDetails.map((playerDetails) => (
 						<div key={playerDetails.summonerId} className='card'>
 							<header id='card-header'>
 								<h1 id='sumName'>{playerDetails.summonerName}</h1>
-								<h2>Team: {playerDetails.teamId / 100}</h2>
+								<h2 id='team'>Team: {playerDetails.teamId / 100}</h2>
 								<h3>{playerDetails.championName}</h3>
 							</header>
-							<ul id='KDR'>
-								<li className='KDA'>Kills: {playerDetails.kills}</li>
-								<li className='KDA'>Deaths: {playerDetails.deaths}</li>
-								<li className='KDA'>Assists: {playerDetails.assists}</li>
-								<li className='KDA'>
-									Minions Killed:{' '}
-									{playerDetails.totalMinionsKilled +
-										playerDetails.neutralMinionsKilled}
-								</li>
-								<li className='KDA'>Gold: {playerDetails.goldEarned}</li>
-								<li className='KDA'>
-									Gold Per Minute:{' '}
-									{Math.floor(
-										playerDetails.goldEarned / (playerDetails.timePlayed / 60)
-									)}
-								</li>
-							</ul>
+							<main id='stats'>
+								<ul id='KDR'>
+									<li className='KDA'>Kills: {playerDetails.kills}</li>
+									<li className='KDA'>Deaths: {playerDetails.deaths}</li>
+									<li className='KDA'>Assists: {playerDetails.assists}</li>
+									<li className='KDA'>
+										Minions Killed:{' '}
+										{playerDetails.totalMinionsKilled +
+											playerDetails.neutralMinionsKilled}
+									</li>
+									<li className='KDA'>Gold: {playerDetails.goldEarned}</li>
+									<li className='KDA'>
+										Gold Per Min:{' '}
+										{Math.floor(
+											playerDetails.goldEarned / (playerDetails.timePlayed / 60)
+										)}
+									</li>
+								</ul>
+							</main>
 						</div>
 					))}
 			</div>
@@ -62,7 +64,6 @@ export default function MakeCard({ gameDetails, playerDetails }) {
 							<h3></h3>
 						</div>
 					))} */}
-			<div>Hello</div>
 		</div>
 	);
 }

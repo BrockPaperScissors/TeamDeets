@@ -1,8 +1,13 @@
+* {
+	box-sizing: border-box;
+}
 .card {
 	border: 2px solid orange;
+	padding: 10px;
 }
 #KDR {
 	list-style-type: none;
+	padding-left: 0;
 }
 
 .card-box {
@@ -10,12 +15,38 @@
 	grid-template-columns: repeat(auto-fill, 20%);
 	grid-template-rows: 1fr 1fr;
 	background-color: bisque;
+	grid-column-start: 3;
+	grid-column-end: span 4;
+	margin-right: 10px;
 }
 
 #card-header {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	padding: 5px 0px;
+}
+
+#stats {
+	display: flex;
+	justify-items: flex-start;
+	align-items: flex-start;
+	padding-left: 0;
 }
 #sumName {
-	font-size: 20px;
+	font-size: 16px;
+	margin-bottom: 0;
+}
+
+#team {
+	margin: 0;
+	font-size: 14px;
+}
+
+#container {
+	display: grid;
+}
+
+#game-tabs {
+	display: flex;
 }
