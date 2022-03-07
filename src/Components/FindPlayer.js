@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function FindPlayer({ setPlayerID }) {
-	let idInput = '';
+	const [idInput, setIdInput] = useState('');
 	function getPlayerID() {
 		const url = `https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${idInput}?api_key=${process.env.REACT_APP_TEAM_KEY}`;
 		fetch(url)
@@ -14,7 +14,7 @@ export default function FindPlayer({ setPlayerID }) {
 	}
 
 	function handleChange(e) {
-		idInput = e.target.value;
+		setIdInput(e.target.value);
 	}
 
 	function handleSubmit(e) {
@@ -27,7 +27,13 @@ export default function FindPlayer({ setPlayerID }) {
 			<label htmlFor='summonerSearch' id='summoner-label'>
 				Summoner Name:{' '}
 			</label>
-			<input type='text' id='summonerSearch' onChange={handleChange} />
+			<input
+				type='text'
+				id='summonerSearch'
+				onChange={handleChange}
+				required
+				value={idInput}
+			/>
 			<button type='submit' id='search-button'>
 				Find Summoner
 			</button>

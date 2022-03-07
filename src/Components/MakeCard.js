@@ -1,14 +1,27 @@
 import React, { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
 let team1 = [];
 let team2 = [];
-export default function MakeCard({ gameDetails, playerDetails }) {
+export default function MakeCard({
+	gameDetails,
+	playerDetails,
+	gameID,
+	setGameDetails,
+}) {
+	const { index } = useParams();
+
 	useEffect(() => {
-		if (playerDetails) {
-			console.log(playerDetails);
-			console.log(playerDetails[0].teamId);
+		if (gameID) {
+			console.log(gameID);
+			const url = `https://americas.api.riotgames.com/lol/match/v5/matches/${gameID[index]}?api_key=${process.env.REACT_APP_TEAM_KEY}`;
+			fetch(url)
+				.then((response) => response.json())
+				.then((data) => {
+					setGameDetails(data);
+				});
 		}
-	}, [playerDetails]);
+	}, [gameID, index]);
 
 	return (
 		<div>
