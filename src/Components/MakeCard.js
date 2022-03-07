@@ -7,13 +7,6 @@ export default function MakeCard({ gameDetails, playerDetails }) {
 		if (playerDetails) {
 			console.log(playerDetails);
 			console.log(playerDetails[0].teamId);
-			// // for (let i = 0; i < 10; i++) {
-			// // 	if (playerDetails[i].teamId === 100) {
-			// // 		team1.push(playerDetails[i]);
-			// // 	} else {
-			// // 		team2.push(playerDetails[i]);
-			// // 	}
-			// }
 		}
 	}, [playerDetails]);
 
@@ -26,7 +19,10 @@ export default function MakeCard({ gameDetails, playerDetails }) {
 							<header id='card-header'>
 								<h1 id='sumName'>{playerDetails.summonerName}</h1>
 								<h2 id='team'>Team: {playerDetails.teamId / 100}</h2>
-								<h3>{playerDetails.championName}</h3>
+								<img
+									src={`http://ddragon.leagueoflegends.com/cdn/12.5.1/img/champion/${playerDetails.championName}.png`}
+									alt=''
+								/>
 							</header>
 							<main id='stats'>
 								<ul id='KDR'>
@@ -50,20 +46,6 @@ export default function MakeCard({ gameDetails, playerDetails }) {
 						</div>
 					))}
 			</div>
-			{/* <div className='card-box'>
-				{team1 &&
-					team1.map((team1) => (
-						<div key={team1.summonerId} className='card'>
-							<h1>{team1.summonerName}</h1>
-							<ul id='KDR'>
-								<li className='KDA'>Kills: {team1.kills}</li>
-								<li className='KDA'>Deaths: {team1.deaths}</li>
-								<li className='KDA'>Assists: {team1.assists}</li>
-							</ul>
-							<h2></h2>
-							<h3></h3>
-						</div>
-					))} */}
 		</div>
 	);
 }

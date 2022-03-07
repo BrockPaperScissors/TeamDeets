@@ -3,8 +3,9 @@ import MakeCard from './Components/MakeCard';
 import Player from './Components/Player';
 import GetGameDetails from './Components/GameDetails';
 import FindPlayer from './Components/FindPlayer';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import GetGameID from './Components/Game';
+import { Routes, Route, Link, Navigate } from 'react-router-dom';
 
 function App() {
 	const [playerID, setPlayerID] = useState('');
@@ -18,14 +19,39 @@ function App() {
 			<GetGameDetails gameID={gameID} setGameDetails={setGameDetails} />
 			<Player gameDetails={gameDetails} setPlayerDetails={setPlayerDetails} />
 			<div id='container'>
-				<h1 id='page-title'>Team Deets</h1>
+				<Link to='/'>
+					<h1 id='page-title'>Team Deets</h1>
+				</Link>
 				<nav id='game-tabs'>
-					<li className='games'>Most Recent Game</li>
-					<li className='games'>Game 2</li>
-					<li className='games'>Game 3</li>
-					<li className='games'>Game 4</li>
-					<li className='games'>Game 5</li>
+					<Link to='/gameone'>
+						<li className='games'>Most Recent Game</li>
+					</Link>
+					<Link to='/gametwo'>
+						<li className='games'>Game 2</li>
+					</Link>
+					<Link to='/gamethree'>
+						<li className='games'>Game 3</li>
+					</Link>
+					<Link to='/gamefour'>
+						<li className='games'>Game 4</li>
+					</Link>
+					<Link to='/gamefive'>
+						<li className='games'>Game 5</li>
+					</Link>
 				</nav>
+				<main>
+					<Routes>
+						<Route path='/gameone' element={<MakeCard gameID={gameID} />} />
+						{/* <Route path='/gametwo' element={<MakeCard gameDetails={gameDetails} playerDetails={playerDetails} />} />
+						<Route
+							path='/gamethree'
+							element={<MakeCard gameDetails={gameDetails} playerDetails={playerDetails} />}
+						/>
+						<Route path='/gamefour' element={<MakeCard gameDetails={gameDetails} playerDetails={playerDetails} />} />
+						<Route path='/gamefive' element={<MakeCard gameDetails={gameDetails} playerDetails={playerDetails} />} /> */}
+						<Route path='/' element={<Navigate to='/' />} />
+					</Routes>
+				</main>
 
 				<MakeCard gameDetails={gameDetails} playerDetails={playerDetails} />
 			</div>
