@@ -2,7 +2,17 @@
 
 The project I would like to make is a League of Legends related app using official Riot APIs. I would like to be able to search a summoners name and see a history and the stats of their recent matches.
 
+## Getting Started:
+
+In order to use this app, a user must head to the link deployed to netlify (found below) and enter their League of Legends summoner name in the search bar. When they click "Find Summoner", they will get data back on their most recently played match.
+
 ## Link to the app:
+
+https://jolly-babbage-9acc26.netlify.app/
+
+## Technologies used in building this App:
+
+This app was created using React, Javascript, HTML and CSS. Information is gathered using three APIs from Riot Games (links to those found near the bottom of the page). The use of state variables and hooks were implemented to ease the passing of all the data between React components.
 
 ## MVP goals:
 
@@ -60,3 +70,7 @@ https://developer.riotgames.com/apis#summoner-v4/GET_getBySummonerName<br> https
                 "totalDamageDealt": 184060,
                 "totalDamageDealtToChampions": 33721,
 ```
+
+## Like to contribute?
+
+Questions, comments, concerns, suggestions, tips, anything you feel like reaching out to discuss can be initiated at bestpizzamanna@gmail.com
