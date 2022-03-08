@@ -119,11 +119,20 @@ body {
 	border-bottom: none;
 }
 
-@media only screen and (min-width: 1230px) {
+@media only screen and (min-width: 1200px) {
 	#home-image {
 		width: 1400px;
 		height: auto;
 		margin-left: 100px;
+		border-top: none;
+	}
+}
+
+@media only screen and (min-width: 1400px) {
+	#home-image {
+		width: 1600px;
+		height: auto;
+		margin-left: 125px;
 		border-top: none;
 	}
 }

@@ -4,7 +4,7 @@ import Player from './Components/Player';
 import FindPlayer from './Components/FindPlayer';
 import React, { useState } from 'react';
 import GetGameID from './Components/Game';
-import { Routes, Route, Link, Navigate } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import Home from './Components/Home';
 
 function App() {
