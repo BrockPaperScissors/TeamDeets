@@ -7,11 +7,10 @@ body {
 	background-color: black;
 }
 #home-image {
+	display: flex;
 	position: absolute;
-	height: max-content;
-	width: max-content;
 	z-index: -1;
-	top: 50px;
+	top: 100px;
 	border-top: 2px solid white;
 }
 #page-title {
@@ -118,4 +117,13 @@ body {
 .games:hover {
 	border: 2px solid black;
 	border-bottom: none;
+}
+
+@media only screen and (min-width: 1230px) {
+	#home-image {
+		width: 1400px;
+		height: auto;
+		margin-left: 100px;
+		border-top: none;
+	}
 }

@@ -12,7 +12,6 @@ function App() {
 	const [gameID, setGameID] = useState('');
 	const [gameDetails, setGameDetails] = useState(null);
 	const [playerDetails, setPlayerDetails] = useState(null);
-	let gameNum = 0;
 
 	return (
 		<>
