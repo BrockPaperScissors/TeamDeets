@@ -1,6 +1,6 @@
 * {
 	box-sizing: border-box;
-	padding: 2px;
+	/* padding: 2px; */
 }
 
 body {
@@ -119,6 +119,19 @@ body {
 	border-bottom: none;
 }
 
+#home-boiler {
+	color: white;
+	width: 75%;
+}
+
+#home-footer {
+	display: flex;
+	justify-content: center;
+
+	position: absolute;
+	bottom: -100px;
+}
+
 @media only screen and (min-width: 1200px) {
 	#home-image {
 		width: 1400px;
@@ -134,5 +147,43 @@ body {
 		height: auto;
 		margin-left: 125px;
 		border-top: none;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	#player-champ {
+		width: 80px;
+		height: auto;
+	}
+
+	#sumName {
+		font-size: 12px;
+	}
+
+	#KDR {
+		font-size: 14px;
+	}
+
+	#team {
+		font-size: 10px;
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	#player-champ {
+		width: 40px;
+		height: auto;
+	}
+
+	#sumName {
+		font-size: 10px;
+	}
+
+	#KDR {
+		font-size: 10px;
+	}
+
+	#team {
+		font-size: 8px;
 	}
 }

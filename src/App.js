@@ -20,6 +20,7 @@ function App() {
 				alt=''
 				id='home-image'
 			/>
+			<Home />
 			<FindPlayer setPlayerID={setPlayerID} />
 			<GetGameID playerID={playerID} gameID={gameID} setGameID={setGameID} />
 			<Player gameDetails={gameDetails} setPlayerDetails={setPlayerDetails} />
@@ -60,7 +61,6 @@ function App() {
 						<Route path='/' element={<Home />} />
 					</Routes>
 				</main>
-				<Home />
 			</div>
 		</>
 	);

@@ -27,6 +27,7 @@ export default function MakeCard({ playerDetails, gameID, setGameDetails }) {
 								<img
 									src={`http://ddragon.leagueoflegends.com/cdn/12.5.1/img/champion/${playerDetails.championName}.png`}
 									alt={`${playerDetails.championName}`}
+									id='player-champ'
 								/>
 							</header>
 							<main id='stats'>
