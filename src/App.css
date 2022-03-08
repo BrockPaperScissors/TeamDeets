@@ -5,6 +5,10 @@
 body {
 	background-color: black;
 }
+#error {
+	color: white;
+	font-size: 46px;
+}
 #home-image {
 	display: flex;
 	position: absolute;
