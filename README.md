@@ -14,6 +14,8 @@ The project I would like to make is a League of Legends related app using offici
 
 In order to use this app, a user must head to the link deployed to netlify (found below) and enter their League of Legends summoner name in the search bar. When they click "Find Summoner", they will get data back on their most recently played match.
 
+If you do not have a Leauge of Legends account, and are interested in trying out the app, use my summoner name! Enter BestPizzaManNA in the search field and hit "Find Summoner" to see the results!
+
 ## Link to the app:
 
 https://jolly-babbage-9acc26.netlify.app/
