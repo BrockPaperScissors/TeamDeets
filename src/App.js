@@ -16,13 +16,13 @@ function App() {
 
 	return (
 		<>
+			<img
+				src='https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Brand_6.jpg '
+				alt=''
+				id='home-image'
+			/>
 			<FindPlayer setPlayerID={setPlayerID} />
 			<GetGameID playerID={playerID} gameID={gameID} setGameID={setGameID} />
-			{/* <GetGameDetails
-				gameID={gameID}
-				setGameDetails={setGameDetails}
-				gameNum={gameNum}
-			/> */}
 			<Player gameDetails={gameDetails} setPlayerDetails={setPlayerDetails} />
 			<div id='container'>
 				<Link to='/'>

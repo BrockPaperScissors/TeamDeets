@@ -1,19 +1,11 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-let team1 = [];
-let team2 = [];
-export default function MakeCard({
-	gameDetails,
-	playerDetails,
-	gameID,
-	setGameDetails,
-}) {
+export default function MakeCard({ playerDetails, gameID, setGameDetails }) {
 	const { index } = useParams();
 
 	useEffect(() => {
 		if (gameID) {
-			console.log(gameID);
 			const url = `https://americas.api.riotgames.com/lol/match/v5/matches/${gameID[index]}?api_key=${process.env.REACT_APP_TEAM_KEY}`;
 			fetch(url)
 				.then((response) => response.json())
@@ -34,7 +26,7 @@ export default function MakeCard({
 								<h2 id='team'>Team: {playerDetails.teamId / 100}</h2>
 								<img
 									src={`http://ddragon.leagueoflegends.com/cdn/12.5.1/img/champion/${playerDetails.championName}.png`}
-									alt=''
+									alt={`${playerDetails.championName}`}
 								/>
 							</header>
 							<main id='stats'>

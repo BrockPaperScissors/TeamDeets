@@ -2,6 +2,18 @@
 	box-sizing: border-box;
 	padding: 2px;
 }
+
+body {
+	background-color: black;
+}
+#home-image {
+	position: absolute;
+	height: max-content;
+	width: max-content;
+	z-index: -1;
+	top: 50px;
+	border-top: 2px solid white;
+}
 #page-title {
 	margin-top: 0;
 	margin-bottom: 0;
@@ -9,6 +21,7 @@
 	position: absolute;
 	top: 0;
 	font-size: 36px;
+	color: white;
 }
 #find-summoner {
 	display: flex;
@@ -19,6 +32,7 @@
 	padding-right: 5px;
 	font-size: 20px;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: white;
 }
 
 #summonerSearch {
@@ -50,6 +64,7 @@
 	grid-template-columns: repeat(auto-fill, 20%);
 	grid-template-rows: 50% 50%;
 	background-color: bisque;
+	opacity: 0.8;
 }
 
 #card-header {
@@ -96,6 +111,9 @@
 	border-top: none;
 	border-bottom: none;
 	padding: 0 10px;
+	color: white;
+	font-weight: bold;
+	text-shadow: 2px 2px 2px #000000;
 }
 .games:hover {
 	border: 2px solid black;
