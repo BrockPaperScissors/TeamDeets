@@ -135,6 +135,15 @@ body {
 	bottom: -100px;
 }
 
+#error-message {
+	color: white;
+	font-weight: bold;
+	font-size: 10px;
+	position: absolute;
+	margin-top: 2rem;
+	margin-right: 13rem;
+}
+
 @media only screen and (min-width: 1200px) {
 	#home-image {
 		width: 1400px;

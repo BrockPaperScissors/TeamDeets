@@ -38,7 +38,7 @@ export default function FindPlayer({ setPlayerID }) {
 				required
 				value={idInput}
 			/>
-			{errors ? <p>{errors}</p> : null}
+			{errors ? <p id='error-message'>{errors}</p> : null}
 			<button type='submit' id='search-button'>
 				Find Summoner
 			</button>
