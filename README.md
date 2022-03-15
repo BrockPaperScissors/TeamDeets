@@ -18,7 +18,7 @@ If you do not have a Leauge of Legends account, and are interested in trying out
 
 ## Link to the app:
 
-https://jolly-babbage-9acc26.netlify.app/
+https://teamdeets.netlify.app/
 
 ## Technologies used in building this App:
 
